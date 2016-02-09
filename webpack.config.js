@@ -47,10 +47,10 @@ module.exports = {
 				loader: 'eslint-loader',
 				include: /nexus_modules/		
 			},
-        	{//load like normal libs (for global contexts) as regular scripts
+        	{//load like normal libs (for global contexts) as regular scripts, prefered to be minified already
         		test: /\.js?$/,
         		loader: 'script-loader',
-        		include: /(jquery|foundation-sites|polyfill)/
+        		include: /(jquery|polyfill)/
         	}
         ],
         noParse: [//avoid parsing large dists that dont use imports/requires/define,
@@ -59,10 +59,10 @@ module.exports = {
         ]
 	},
 	resolve: {
-		root: [//the requires start searching at root
+		root: [//the requires start searching at root, absolute path
 			path.resolve(__dirname)
 		],
-		modulesDirectories: [// after root, search these
+		modulesDirectories: [// after root, search these using relative path
 			"web_modules", "node_modules", "bower_components", "src/assets/js"
 		],
     	alias:{ //modules may depend on other modules but simple name, just 
