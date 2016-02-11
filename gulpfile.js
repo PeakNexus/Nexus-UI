@@ -16,7 +16,10 @@ var COMPATIBILITY = ['last 2 versions', 'ie >= 9'];
 var PATHS = {
   assets: [
     'src/assets/**/*',
-    '!src/assets/{!img,js,scss,vendor}/*'
+    '!src/assets/{!img,js,scss}/*'
+  ],
+  vendor: [
+    'vendor/**/*'
   ],
   sass: [
     'bower_components/foundation-sites/scss',
@@ -35,6 +38,9 @@ gulp.task('clean', function(done) {
 gulp.task('copy', function() {
   gulp.src(PATHS.assets)
     .pipe(gulp.dest('dist/assets'));
+
+  gulp.src(PATHS.vendor)
+    .pipe(gulp.dest('dist/vendor'));
 });
 
 gulp.task('styleguide', function(cb) {

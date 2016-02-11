@@ -1,5 +1,5 @@
 {
-  "name": "nexus-ui-lib",
+  "name": "nexus-ui",
   "version": "0.1.0",
   "description": "Official Nexus UI library/framework.",
   "main": "gulpfile.js",

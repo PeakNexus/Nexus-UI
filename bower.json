@@ -1,10 +1,10 @@
 {
-  "name": "foundation-ssg",
-  "version": "1.0.0",
+  "name": "nexus-ui",
+  "version": "0.1.0",
   "authors": [
-    "ZURB <foundation@zurb.com>"
+    "Peak Nexus <peaknexus.com>"
   ],
-  "description": "Static site generator for Foundation for Sites.",
+  "description": "Nexus-UI library generator",
   "main": "gulpfile.js",
   "license": "MIT",
   "ignore": [
